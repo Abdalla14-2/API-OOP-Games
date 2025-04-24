@@ -1,0 +1,113 @@
+body {
+  font-family: "Pacifico", cursive;
+  background-color: #272b30;
+  position: relative;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url(../IMGs/wraper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  opacity: 0.7;
+  z-index: -1;
+}
+nav {
+  margin-top: 250px;
+  background-color: #3a497b;
+}
+.nav-item a {
+  font-size: 0.85rem !important;
+}
+.logo-img {
+  width: 45px !important;
+  height: auto;
+}
+.active-nav {
+  color: #469bf0 !important;
+}
+.card-body .badge {
+  background-color: #4e4e4e;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover .card-body .badge {
+  background-color: #0d6efd;
+}
+.card {
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.95);
+}
+.card:hover {
+  transform: scale(1);
+}
+.card-text {
+  color: #919395;
+  font-size: small;
+}
+.custom-footer {
+  border-top: 2px solid #ccc !important;
+}
+.card-footer .badge {
+  background-color: #32383e !important;
+}
+.details {
+  background-color: #272b30;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+.details-top i {
+  transition: all 0.2s ease-in-out;
+}
+.details-top i:hover {
+  color: #ccc !important;
+  cursor: pointer;
+}
+.text-infos p {
+  font-size: smaller !important;
+}
+.loader-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+.loader {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  width: 40px;
+  height: 40px;
+  --c: no-repeat linear-gradient(orange 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 21px 21px;
+  animation: l5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes l5 {
+  0% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  33% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    width: 60px;
+    height: 60px;
+  }
+  66% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+  }
+}
